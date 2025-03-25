@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Analysis-by-Synthesis</title>
+        <script src="template.v2.js"></script>
+        <link rel="icon" href="assets/jhu.png" type="image/png" sizes="128x128">
+        <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+        <!-- <script src="https://d3js.org/d3-collection.v1.min.js"></script> -->
+        <script src="https://rawgit.com/nstrayer/slid3r/master/dist/slid3r.js"></script>
+        <script src="cross_fade.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+            onload="renderMathInElement(document.body);">
+        </script>
+        <script src="assets/js/mesh_viewer.js"></script>
+        <script src="assets/js/splide.min.js"></script>
+        <script src="assets/js/transition.js"></script>
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <link rel="stylesheet" href="assets/styles/splide.min.css">
+        <!-- <link rel="stylesheet" href="assets/styles/bulma.min.css"> -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+        <style>
+            .slider-container {
+                margin: auto; /* Centers the container */
+                width: 80%; /* Adjust this to set the container's width */
+            }
+
+            input[type=range].styled-slider {
+                width: 100%; /* Makes the slider take the full width of its container */
+                /* Add any other styling for the slider here */
+            }
+
+            .button:hover span {
+                color: rgb(255, 204, 0);
+            }
+            .external-link.button.is-normal.is-rounded:hover {
+                color: rgb(255, 204, 0);
+            }
+
+            .task1 {
+                color: #FF9500;
+            }
+
+            .task2 {
+                color: #00A193;
+            }
+
+            .task3 {
+                color: #8D59FF;
+            }
+        </style>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WV722EWZYV"></script>
+        <!-- <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WV722EWZYV');
+        </script> -->
+    </head>
+    <body>
+        <div class="header-container">
+            <div class="header-content">
+              <h1>Vision as Analysis-by-Synthesis</h1>
+              <h3>Analysis-by-Synthesis Team at <a href="https://ccvl.jhu.edu">CCVL</a>@<a href="https://www.jhu.edu">JHU</a></h3>
+              <!-- <div class="button-container">
+                <a href="http://arxiv.org/abs/2406.09613" class="button" target="_blank">arXiv</a>
+                <a href="https://github.com/wufeim/imagenet3d" class="button" target="_blank">Data</a>
+                <a href="https://github.com/wufeim/imagenet3d_exp" class="button" target="_blank">Code</a>
+              </div> -->
+            </div>
+        </div>
+    <d-article>
+        <d-contents style="margin-top: 0px;">
+            <nav>
+                <h4>Contents</h4>
+                <div><a href="#pub">Publications</a></div>
+                <div><a href="#team">Team</a></div>
+                <div><a href="#misc">Misc.</a></div>
+            </nav>
+        </d-contents>
+
+        <p style="text-align: justify;">
+            Advancing vision with analysis-by-synthesis.
+        </p>
+        <!-- <d-figure>
+            <figure>
+                <img src="assets/images/imagenet3d.png" alt="ImageNet3D overview" style="max-height: 360px; object-fit: contain;">
+                <figcaption>
+                    <b>Figure 1.</b> Overview of our ImageNet3D dataset.
+                </figcaption>
+            </figure>
+        </d-figure> -->
+
+        <section id="pub">
+            <h2 id="pub">Publications</h2>
+            <p style="text-align: justify;">
+                <b>DINeMo: Learning Neural Mesh Models with no 3D Annotations</b><br/>
+                Weijie Guo, Guofeng Zhang, Wufei Ma, Alan Yuille<br/>
+                Technical Report, 2025
+            </p>
+            <p style="text-align: justify;">
+                <b>ShapeABS: Robust 3D Shape Retrieval with Analysis-by-Synthesis</b><br/>
+                Naifu Liang, Wufei Ma, Guofeng Zhang, Alan Yuille<br/>
+                Technical Report, 2025<br/>
+                <a href="https://github.com/ccvl/ShapeABS">[code]</a>
+            </p>
+            <p style="text-align: justify;">
+                <b><a href="https://arxiv.org/abs/2305.14668" style="color: #002D72;">NOVUM: Neural Object Volumes for Robust Object Classification</a></b><br/>
+                Artur Jesslen, Guofeng Zhang, Angtian Wang, Wufei Ma, Alan Yuille, Adam Kortylewski<br/>
+                In <i>European Conference on Computer Vision</i>, 2024<br/>
+                <a href="https://arxiv.org/abs/2305.14668">[arXiv]</a> <a href="https://github.com/GenIntel/NOVUM">[code]</a>
+            </p>
+            <p style="text-align: justify;">
+                <b><a href="http://arxiv.org/abs/2306.00118" style="color: #002D72;">Neural textured deformable meshes for robust analysis-by-synthesis</a></b><br/>
+                Angtian Wang*, Wufei Ma*, Alan Yuille, Adam Kortylewski<br/>
+                In <i>Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision</i>, 2024<br/>
+                <a href="http://arxiv.org/abs/2306.00118">[arXiv]</a>
+            </p>
+            <p style="text-align: justify;">
+                <b><a href="http://arxiv.org/abs/2305.16124" style="color: #002D72;">Robust Category-Level 3D Pose Estimation from Diffusion-Enhanced Synthetic Data</a></b><br/>
+                Jiahao Yang, Wufei Ma, Angtian Wang, Xiaoding Yuan, Alan Yuille, Adam Kortylewski<br/>
+                In <i>Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision</i>, 2024<br/>
+                <a href="http://arxiv.org/abs/2305.16124">[arXiv]</a>
+            </p>
+            <p style="text-align: justify;">
+                <b><a href="http://arxiv.org/abs/2209.05624" style="color: #002D72;">Robust Category-Level 6D Pose Estimation with Coarse-to-Fine Rendering of Neural Features</a></b><br/>
+                Wufei Ma, Angtian Wang, Alan Yuille, Adam Kortylewski<br/>
+                In <i>European Conference on Computer Vision</i>, 2022<br/>
+                <a href="http://arxiv.org/abs/2209.05624">[arXiv]</a> <a href="https://github.com/wufeim/6d_pose_eccv22">[code]</a>
+            </p>
+            <p style="text-align: justify;">
+                <b><a href="https://arxiv.org/abs/2101.12378" style="color: #002D72;">NeMo: Neural Mesh Models of Contrastive Features for Robust 3D Pose Estimation</a></b><br/>
+                Angtian Wang, Adam Kortylewski, Alan Yuille<br/>
+                In <i>International Conference on Learning Representations</i>, 2021<br/>
+                <a href="https://arxiv.org/abs/2101.12378">[arXiv]</a> <a href="https://github.com/Angtian/NeMo">[code]</a>
+            </p>
+        </section>
+
+        <section id="team">
+            <h2 id="team">Team</h2>
+            <!-- <p style="text-align: justify;">
+                <a href="https://wufeim.github.io">Wufei Ma</a>, <a href="https://sites.google.com/view/yu-cheng-chou">Yu-Cheng Chou</a>, <a href="https://xingruiwang.github.io">Xingrui Wang</a>, <a href="https://qihao067.github.io">Qihao Liu</a>, <a href="https://beckschen.github.io">Jieneng Chen</a>, <a href="https://www.cs.jhu.edu/~ayuille/">Alan Yuille</a>
+            </p> -->
+        </section>
+
+        <section id="misc">
+            <h2 id="misc">Miscellaneous</h2>
+            <!-- <p style="text-align: justify;">
+                If you would like to join our team or would like to collaborate, please contact <a href="https://wufeim.github.io">Wufei Ma</a> and <a href="https://beckschen.github.io">Jieneng Chen</a>.
+            </p> -->
+        </section>
+
+        </d-article>
+        <d-appendix>
+            <!-- <h3>BibTeX</h3>
+            <p class="bibtex">
+                @article{ma2024imagenet3d,<br>
+                &nbsp;&nbsp;title={ImageNet3D: Towards General-Purpose Object-Level 3D Understanding},<br>
+                &nbsp;&nbsp;author={Ma, Wufei and Zeng, Guanning and Zhang, Guofeng and Liu, Qihao and Zhang, Letian and Kortylewski, Adam and Liu, Yaoyao and Yuille, Alan},<br>
+                &nbsp;&nbsp;journal={arXiv preprint arXiv:2406.09613},<br>
+                &nbsp;&nbsp;year={2024}<br>
+                }
+            </p> -->
+
+            <h3>Notes</h3>
+            <p>This website template is adapted from <a href="https://image-sculpting.github.io">Image Sculpting</a>.</p>
+
+            <d-footnote-list></d-footnote-list>
+            <d-citation-list></d-citation-list>
+        </d-appendix>
+
+          <!-- bibliography will be inlined during Distill pipeline's pre-rendering -->
+        <d-bibliography src="bibliography.bib"></d-bibliography>
+
+        <!-- <script type="text/bibliography">
+
+        </script> -->
+        <script src="contents_bar.js"></script>
+
+        <script>
+
+
+            window.dataLayer = window.dataLayer || [];
+
+            function initSlider(sliderId) {
+                return new Splide(sliderId, {
+                    type: 'fade',
+                    rewind: true,
+                    perPage: 1,
+                    perMove: 1,
+                    focus: 'center',
+                    width: '100%',
+                    arrows: 'slider',
+                    drag: false,
+                    autoplay: true,
+                    speed: 1000,
+                    lazyLoad: 'nearby',
+                }).mount();
+            }
+
+
+            // Initialize sliders
+            var poseSlider = initSlider('#pose-slider');
+            var carvingSlider = initSlider('#carving-slider');
+            var compositionSlider = initSlider('#composition-slider');
+            var translationSlider = initSlider('#translation-slider');
+            var rotationSlider = initSlider('#rotation-slider');
+            var additionSlider = initSlider('#addition-slider');
+            var imageAngles = {
+                cat: ['0000', '0001', '0002', '0003', '0004', '0005', '0007', '0008', '0009'],
+                chair: ['0000', '0001', '0002', '0003', '0004', '0005', '0007', '0009'],
+                astronaut0: ['0000', '0001', '0002', '0003', '0004', '0006', '0007', '0008', '0009'],
+                joker: ['0000', '0003', '0004', '0005', '0008', '0009'],
+                astronaut1: ['0001', '0002', '0003', '0004', '0008', '0009'],
+                astronaut2: ['0000', '0001', '0003', '0006', '0008', '0009'],
+                lalaland: ['0000', '0001', '0003', '0008', '0009'],
+            };
+
+            // Function to display and refresh the Carving slider
+            function showCarvingSlider() {
+                var carvingContainer = document.getElementById('Carving');
+                carvingContainer.style.display = 'block';
+                carvingSlider.refresh();
+            }
+            function showCompositionSlider() {
+                var carvingContainer = document.getElementById('Composition');
+                carvingContainer.style.display = 'block';
+                compositionSlider.refresh();
+            }
+
+            function showTranslationSlider() {
+                var carvingContainer = document.getElementById('Translation');
+                carvingContainer.style.display = 'block';
+                translationSlider.refresh();
+            }
+
+            function showAdditionSlider() {
+                var carvingContainer = document.getElementById('Addition');
+                carvingContainer.style.display = 'block';
+                additionSlider.refresh();
+            }
+
+
+
+            function showRotationSlider() {
+                var carvingContainer = document.getElementById('Rotation');
+                carvingContainer.style.display = 'block';
+                rotationSlider.refresh();
+            }
+
+            function showPoseSlider() {
+                var carvingContainer = document.getElementById('Pose');
+                carvingContainer.style.display = 'block';
+                poseSlider.refresh();
+            }
+
+
+            function showCategory(categoryName) {
+                if (categoryName === 'Carving') {
+                    showCarvingSlider();
+                }
+                else if (categoryName === 'Composition') {
+                    showCompositionSlider();
+                }
+                else if (categoryName === 'Translation') {
+                    showTranslationSlider();
+                }
+                else if (categoryName === 'Addition') {
+                    showAdditionSlider();
+                }
+                else if (categoryName === 'Rotation') {
+                    showRotationSlider();
+                }
+                else if (categoryName === 'Pose') {
+                    showPoseSlider();
+                }
+                var categories = document.getElementsByClassName("category-content");
+                for (var i = 0; i < categories.length; i++) {
+                    categories[i].style.display = "none";
+                }
+                document.getElementById(categoryName).style.display = "block";
+                var buttons = document.querySelectorAll('.button-container button');
+                buttons.forEach(function(button) {
+                    button.classList.remove('active');
+                });
+
+                // Add 'active' class to the clicked button
+                event.currentTarget.classList.add('active');
+            }
+            function rotate(index, name) {
+                var imagePath = `assets/images/pose_rotation/${name}/pose0/${imageAngles[name][index]}.jpg`;
+                var rotateElements = document.getElementsByClassName('rotate-' + name);
+
+                // Update all instances of rotateElements
+                for (var i = 0; i < rotateElements.length; i++) {
+                    rotateElements[i].src = imagePath;
+                }
+
+                var updatedOrientation = 90 + 36 * parseInt(imageAngles[name][index]);
+                var modelOrientation = updatedOrientation + "deg 270deg 180deg";
+                var rotationAfterElements = document.getElementsByClassName(name + '-rotation-after');
+
+                // Update all instances of rotationAfterElements
+                for (var j = 0; j < rotationAfterElements.length; j++) {
+                    rotationAfterElements[j].setAttribute('orientation', modelOrientation);
+                }
+            }
+
+
+
+            function updateRotation(direction, model) {
+                var currentRotationElement = document.getElementById('rotation' + model);
+                var currentRotationIndex = parseInt(currentRotationElement.value);
+                currentRotationIndex += direction;
+
+                if (currentRotationIndex < 0) currentRotationIndex = imageAngles[model].length - 1;
+                if (currentRotationIndex >= imageAngles[model].length) currentRotationIndex = 0;
+                currentRotationElement.value = currentRotationIndex;
+
+                rotate(currentRotationIndex, model);
+
+                var rotationDisplays = document.getElementsByClassName("rotationDisplay" + model);
+
+
+                for (var i = 0; i < rotationDisplays.length; i++) {
+                    rotationDisplays[i].textContent = "Rotation: " + 36 * imageAngles[model][currentRotationIndex] + "°";
+                }
+            }
+
+
+            function updateAddition(direction, model) {
+                var currentAdditionElement = document.getElementById('addition' + model);
+                var currentAdditionIndex = parseInt(currentAdditionElement.value);
+                currentAdditionIndex += direction;
+                currentAdditionIndex = Math.max(0, Math.min(currentAdditionIndex, 4));
+                currentAdditionElement.value = currentAdditionIndex;
+                // Toggle visibility of the plus and minus buttons using their IDs
+                var plusButton = document.getElementById('plusButton' + model);
+                var minusButton = document.getElementById('minusButton' + model);
+
+                plusButton.style.visibility = currentAdditionIndex >= 4 ? 'hidden' : 'visible';
+                minusButton.style.visibility = currentAdditionIndex <= 0 ? 'hidden' : 'visible';
+
+                addObject(currentAdditionIndex, model);
+                var additionDisplay = document.getElementsByClassName("additionDisplay" + model);
+                for (var j=0; j < additionDisplay.length; j++) {
+                    additionDisplay[j].textContent = "Number of Objects: " + currentAdditionIndex;
+                }
+
+
+            }
+
+            function addObject(num, name) {
+                var meshPath = `assets/meshes/addition/${name}_${num}.glb`;
+                var imagePath = `assets/images/addition/${name}/${num}.jpg`;
+                var allMesh = document.getElementsByClassName(name + "-after-add");
+                var allImg = document.getElementsByClassName("add-" + name);
+                for (var i = 0; i < allMesh.length; i++) {
+                    allMesh[i].src = meshPath;
+                    allImg[i].src = imagePath;
+                }
+
+                additionSlider.refresh();
+            }
+
+
+        </script>
+
+
+    </body>
+</html>
